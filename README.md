@@ -24,7 +24,8 @@
 
 ## 📋 Table of Contents
 
-- [Overview](#overview)
+- [About](#about)
+- [Author](#author)
 - [Philosophy](#philosophy)
 - [Key Features](#key-features)
 - [Architecture](#architecture)
@@ -47,9 +48,27 @@
 
 ---
 
-## 🎯 Overview
+## 🎯 About
 
-**Elite Dev Agents Orchestration** is a production-grade autonomous AI agent system built on Claude Code, optimized for maximum efficiency and minimal cost. This system orchestrates 12 proactive agents, 21 specialized skills, and 19 MCP servers to deliver unprecedented development velocity.
+**Elite Dev Agents Orchestration** is the result of a deep engineering effort to create a true AI development powerhouse. It unifies the most potent features from advanced autonomous agent protocols into a single, cohesive orchestration system designed for complex development tasks.
+
+Embodying the principles of digital craftsmanship, this system operates with unparalleled intelligence and transparency, orchestrating 12 proactive agents, 21 specialized skills, and 19 MCP servers to deliver unprecedented development velocity with 40-60% cost reduction and 300-500% faster execution.
+
+---
+
+## 👤 Author
+
+**Wan Mohamad Hanis bin Wan Hassan**
+
+Transdisciplinary strategist synthesizing AI, cybersecurity, cloud infrastructure, and business intelligence into cohesive orchestration systems. Architecting autonomous development workflows that embody precision, efficiency, and digital craftsmanship.
+
+*"Forged by fire, defined by design."*
+
+- 🌐 [GitHub: @NovusAevum](https://github.com/NovusAevum)
+- 💼 Specialization: AI Agent Orchestration, DevOps Automation, Enterprise Architecture
+- 🏆 Philosophy: Zero-BS, test-first, production-ready from day one
+
+---
 
 ### The Problem
 
@@ -428,26 +447,24 @@ graph LR
 ```mermaid
 gantt
     title Task Execution Timeline Comparison
-    dateFormat X
-    axisFormat %s
-    
+    dateFormat s
+    axisFormat %Ss
+
     section Default Mode
-    Analyze Task           :0, 10s
-    Manual Approval        :10s, 15s
-    Sequential Agent 1     :25s, 35s
-    Manual Approval        :35s, 40s
-    Sequential Agent 2     :40s, 50s
-    Manual Approval        :50s, 55s
-    Validation            :55s, 65s
-    Total: 65s            :milestone, 65s, 0s
-    
+    Analyze Task           :0, 10
+    Manual Approval        :10, 5
+    Sequential Agent 1     :25, 10
+    Manual Approval        :35, 5
+    Sequential Agent 2     :40, 10
+    Manual Approval        :50, 5
+    Validation            :55, 10
+
     section Elite Mode
-    Analyze Task (Parallel):0, 5s
-    Deploy Agents (Parallel):5s, 7s
-    Agent 1 + 2 + 3 (Parallel):7s, 17s
-    Aggregate Results      :17s, 19s
-    Validation (Auto)      :19s, 21s
-    Total: 21s (309% faster):milestone, 21s, 0s
+    Analyze Task (Parallel):0, 5
+    Deploy Agents (Parallel):5, 2
+    Agent 1 + 2 + 3 (Parallel):7, 10
+    Aggregate Results      :17, 2
+    Validation (Auto)      :19, 2
 ```
 
 ### Token Usage Profile
@@ -3067,7 +3084,7 @@ Special thanks to:
 
 <div align="center">
 
-**Elite Dev Agents Orchestration** © 2025 NovusAevum
+**Elite Dev Agents Orchestration** © 2025 Wan Mohamad Hanis bin Wan Hassan
 
 Made with ⚡ by developers, for developers
 
