@@ -1,0 +1,125 @@
+{
+  "mcpServers": {
+    "sequential-thinking": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+      "description": "Advanced reasoning for complex problem-solving"
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/path/to/your/directory"
+      ],
+      "description": "Full filesystem access"
+    },
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "your_github_pat_here"
+      },
+      "description": "GitHub repository operations"
+    },
+    "memory": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory"],
+      "env": {
+        "MEMORY_FILE_PATH": "/path/to/memory.jsonl"
+      },
+      "description": "Persistent context across sessions"
+    },
+    "desktop-commander": {
+      "command": "npx",
+      "args": ["-y", "@wonderwhy-er/desktop-commander"],
+      "description": "Terminal control and file system operations"
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"],
+      "description": "Up-to-date library documentation"
+    },
+    "fetch": {
+      "command": "uvx",
+      "args": ["mcp-server-fetch"],
+      "description": "Web content fetching and transformation"
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@executeautomation/playwright-mcp-server"],
+      "description": "Browser automation via accessibility tree"
+    },
+    "puppeteer": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-puppeteer"],
+      "description": "Chrome browser control and automation"
+    },
+    "linear": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://mcp.linear.app/sse"],
+      "description": "Linear project management integration"
+    },
+    "supabase": {
+      "command": "npx",
+      "args": ["-y", "@supabase/mcp-server"],
+      "env": {
+        "SUPABASE_URL": "your_supabase_url_here",
+        "SUPABASE_SERVICE_ROLE_KEY": "your_supabase_service_role_key_here"
+      },
+      "description": "Supabase database, auth, storage, and realtime"
+    },
+    "semgrep": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "ghcr.io/semgrep/mcp",
+        "-t",
+        "stdio"
+      ],
+      "description": "Code security scanning and vulnerability detection"
+    },
+    "vibe-check": {
+      "command": "npx",
+      "args": ["-y", "@pv-bhat/vibe-check-mcp", "start", "--stdio"],
+      "env": {
+        "MISTRAL_API_KEY": "your_mistral_api_key_here",
+        "DEFAULT_LLM_PROVIDER": "mistral",
+        "DEFAULT_MODEL": "codestral-latest"
+      },
+      "description": "Content validation and vibe checking with Mistral Codestral"
+    },
+    "brave-search": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-brave-search"],
+      "env": {
+        "BRAVE_API_KEY": "your_brave_api_key_here"
+      },
+      "description": "Web search via Brave Search API"
+    },
+    "exa": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-exa"],
+      "env": {
+        "EXA_API_KEY": "your_exa_api_key_here"
+      },
+      "description": "AI-powered semantic search engine"
+    },
+    "browserbase": {
+      "command": "npx",
+      "args": ["-y", "@browserbasehq/mcp-server-browserbase"],
+      "env": {
+        "BROWSERBASE_API_KEY": "your_browserbase_api_key_here",
+        "BROWSERBASE_PROJECT_ID": "your_project_id_here"
+      },
+      "description": "Cloud browser automation and scraping"
+    },
+    "figma": {
+      "command": "npx",
+      "args": ["-y", "@figma/mcp-server-figma"],
+      "description": "Figma design context - frames, variables, components, and FigJam diagrams"
+    }
+  }
+}

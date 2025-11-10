@@ -1,0 +1,43 @@
+{
+  "description": "Global Claude settings - Elite autonomous mode with cost optimization",
+  "version": "2.0",
+  "lastUpdated": "2025-11-11",
+  "permissions": {
+    "defaultMode": "bypassPermissions",
+    "allow": [],
+    "ask": [],
+    "deny": [
+      "Bash(sudo:*)",
+      "Bash(rm -rf /:*)",
+      "Bash(rm -rf ~:*)"
+    ]
+  },
+  "agentBehavior": {
+    "alwaysRecommend": false,
+    "askBeforeCritical": false,
+    "explainReasoning": false,
+    "proactiveMode": true,
+    "costOptimization": true
+  },
+  "enabledPlugins": {
+    "commit-commands@claude-code-plugins": true
+  },
+  "alwaysThinkingEnabled": false,
+  "modelPreferences": {
+    "defaultModel": "sonnet",
+    "useHaikuForSimpleTasks": true,
+    "taskComplexityThreshold": "auto"
+  },
+  "tokenOptimization": {
+    "lazyLoading": true,
+    "contextPruning": true,
+    "incrementalOperations": true,
+    "smartSearch": true
+  },
+  "crossPlatformSync": {
+    "enabled": true,
+    "syncTo": ["claude-code", "claude-desktop", "claude-web"],
+    "syncInterval": "on-change",
+    "conflictResolution": "latest-wins"
+  }
+}

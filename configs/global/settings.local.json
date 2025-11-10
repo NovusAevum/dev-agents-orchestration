@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ln:*)",
+      "Bash(if [ -f .gitignore ])",
+      "Bash(then grep -q \"^\\.claude/$\" .gitignore)",
+      "Bash(.gitignore)",
+      "Bash(else echo \".claude/\")",
+      "Bash(fi)",
+      "Bash(cat:*)",
+      "Bash(ffprobe:*)",
+      "Bash(lsof:*)",
+      "Bash(xargs kill:*)",
+      "mcp__memory__create_entities",
+      "mcp__memory__read_graph"
+    ],
+    "deny": [],
+    "ask": []
+  },
+  "outputStyle": "default"
+}
