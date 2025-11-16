@@ -6,7 +6,7 @@ skinparam shadowing false
 skinparam linetype ortho
 
 ' Title
-title <size:20><b>⚔️ Elite Dev Agents Orchestration - System Architecture</b></size>\n<size:12><i>"From the forge, precision emerges"</i></size>
+title <size:20><b>Dev Agents Orchestration - System Architecture</b></size>\n<size:12><i>Multi-layer agent coordination system</i></size>
 
 ' User Interface Layer
 package "🖥️ User Interface Layer" as UI #1a1f3a {
@@ -43,7 +43,7 @@ package "💡 Skills Layer\n<size:10>21 Specialized Skills</size>" as Skills #3a
 }
 
 ' MCP Layer
-package "🔌 MCP Server Layer\n<size:10>19 Sovereign Servers</size>" as MCP #1f3a2a {
+package "🔌 MCP Server Layer\n<size:10>19 External Servers</size>" as MCP #1f3a2a {
   component "Figma MCP" as Figma #2ecc71
   component "GitHub MCP" as GitHub #27ae60
   component "Supabase MCP" as Supabase #229954

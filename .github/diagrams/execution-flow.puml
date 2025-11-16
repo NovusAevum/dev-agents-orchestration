@@ -5,7 +5,7 @@ skinparam sequenceMessageAlign center
 skinparam responseMessageBelowArrow true
 skinparam shadowing false
 
-title <size:20><b>⚡ Parallel Execution Flow</b></size>\n<size:12><i>"Forged by fire, tempered by precision"</i></size>
+title <size:20><b>⚡ Parallel Execution Flow</b></size>\n<size:12><i>Four-phase agent orchestration</i></size>
 
 actor "👤 User" as User #00d4ff
 participant "🎭 Master\nOrchestrator" as Master #ff6b6b
@@ -18,7 +18,7 @@ participant "☁️ External\nServices" as External #e74c3c
 User -> Master: <b>Task Request</b>
 activate Master
 
-== <b><color:#ffff00>⚒️ PHASE 1: PLANNING (The Forge Awakens)</color></b> ==
+== <b><color:#ffff00>⚒️ PHASE 1: PLANNING</color></b> ==
 Master -> Master: <b>Analyze Requirements</b>
 Master -> Master: <b>Decompose into Atomic Tasks</b>
 Master -> Master: <b>Select Optimal Agents</b>
@@ -28,7 +28,7 @@ Master -> Master: <b>Estimate Token Budget</b>
 Master -> Router: <b>Deploy Agents (Parallel)</b> ⚡
 activate Router
 
-== <b><color:#00ff00>⚔️ PHASE 2: PARALLEL EXECUTION (The Swarm Strikes)</color></b> ==
+== <b><color:#00ff00>⚔️ PHASE 2: PARALLEL EXECUTION</color></b> ==
 
 par <b>Agent 1: auto-debugger</b>
   Router -> Agents: <color:#4ecdc4><b>auto-debugger</b></color>
@@ -100,7 +100,7 @@ end
 Router -> Router: <b>Aggregate Results</b> 📦
 Router -> Router: <b>Validate Quality Gates</b> 🎯
 
-== <b><color:#ff00ff>🛡️ PHASE 3: VALIDATION (The Tempering)</color></b> ==
+== <b><color:#ff00ff>🛡️ PHASE 3: VALIDATION</color></b> ==
 Router -> Router: <b>Check Test Coverage</b> (>80%)
 Router -> Router: <b>Verify Build Success</b> ✅
 Router -> Router: <b>Security Scan</b> 🔒

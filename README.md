@@ -315,18 +315,18 @@ Reusable knowledge modules loaded on-demand
 </td>
 <td>
 
-External capabilities and data sources ("sovereign conduits")
+External capabilities and data sources
 
 </td>
 <td>
 
-**Contextual Sovereignty**: Each MCP operates as autonomous gateway to specialized services
+**Independent Operation**: Each MCP operates as an autonomous gateway to specialized services
 
 </td>
 </tr>
 </table>
 
-### ⚡ Execution Flow: From Chaos to Results
+### ⚡ Execution Flow
 
 <div align="center">
 
@@ -950,7 +950,7 @@ UI implementation, design system sync, mockup-to-code
 <tr>
 <td colspan="3">
 
-> *"Bridges the divide between design and code—Figma frames become React components with pixel-perfect precision."*
+*Figma integration enables design-to-code workflows with component extraction.*
 
 </td>
 </tr>
@@ -1165,7 +1165,7 @@ Large-scale web scraping, distributed testing
 <tr>
 <td colspan="3">
 
-> *"Automation extends beyond code—these servers grant agents mastery over the web itself."*
+*Browser automation servers enable web interaction and testing.*
 
 </td>
 </tr>
@@ -1292,7 +1292,7 @@ Architectural decisions, algorithm design, debugging
 <tr>
 <td colspan="3">
 
-> *"Infrastructure servers provide the anvil—solid foundations upon which all orchestration rests."*
+*Infrastructure servers provide core capabilities for file operations and system control.*
 
 </td>
 </tr>
@@ -1385,7 +1385,7 @@ MCPs configured in **Claude Desktop** automatically sync to **Claude Code** on t
 | Security (Semgrep, Vibe Check) | ✅ Full | ✅ Full | ❌ N/A |
 | Infrastructure (Filesystem, Desktop Commander) | ✅ Full | ✅ Full | ❌ N/A |
 
-> **Note**: Claude Web has limited MCP support. For full sovereign capabilities, use Claude Code or Claude Desktop.
+> **Note**: Claude Web has limited MCP support. For full capabilities, use Claude Code or Claude Desktop.
 
 <img src=".github/assets/section-divider.svg" width="100%" alt="Section Divider">
 
@@ -1499,8 +1499,6 @@ MCPs configured in **Claude Desktop** automatically sync to **Claude Code** on t
 
 ## 🚀 Quick Start
 
-> ### *"From installation to first deployment in under 5 minutes—because precision begins with simplicity."*
-
 ### ⚡ Prerequisites
 
 <table>
@@ -1604,8 +1602,6 @@ claude code
 ---
 
 ## ⚙️ Configuration
-
-> ### *"Configuration is not complexity—it's control. Precise, documented, version-controlled."*
 
 ### 🎛️ Three Execution Modes
 
@@ -1745,8 +1741,6 @@ dev-agents-orchestration/
 
 ## 🔒 Security & Safety
 
-> ### *"Security is not a feature—it's the foundation upon which every line of code is forged."*
-
 ### 🛡️ Multi-Layer Security Architecture
 
 <div align="center">
@@ -1851,8 +1845,6 @@ EXA_API_KEY=exa_xxxx
 ---
 
 ## 📦 Installation
-
-> ### *"Installation should be as elegant as the code it enables—simple, documented, error-resistant."*
 
 ### 🖥️ Platform-Specific Setup
 
@@ -2002,8 +1994,6 @@ MISTRAL_API_KEY=mi_your_api_key
 ---
 
 ## 🎯 Usage Examples
-
-> ### *"Theory illuminates. Examples inspire. Production code validates."*
 
 <div align="center">
 
@@ -2302,8 +2292,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 [![GitHub](https://img.shields.io/badge/GitHub-@NovusAevum-00d4ff?style=for-the-badge&logo=github)](https://github.com/NovusAevum)
 [![MIT License](https://img.shields.io/badge/License-MIT-00ff88?style=for-the-badge)](https://opensource.org/licenses/MIT)
-
-> *"The agent, like the craftsman, learns not from words alone—but from the fire of iteration, the weight of failure, and the precision of refinement."*
 
 **⭐ Star this repository if it helped accelerate your development!**
 
