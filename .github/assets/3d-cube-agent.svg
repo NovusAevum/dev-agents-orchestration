@@ -1,0 +1,44 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="face1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0099cc;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="face2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff00ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#cc00cc;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="face3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00ff88;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00cc66;stop-opacity:1" />
+    </linearGradient>
+    <filter id="cubeGlow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- 3D Cube representing agent -->
+  <g transform="translate(100, 60)" filter="url(#cubeGlow)">
+    <!-- Top face -->
+    <polygon points="0,-30 40,-10 0,10 -40,-10" fill="url(#face1)" stroke="#00d4ff" stroke-width="2"/>
+
+    <!-- Left face -->
+    <polygon points="-40,-10 -40,50 0,70 0,10" fill="url(#face2)" stroke="#ff00ff" stroke-width="2"/>
+
+    <!-- Right face -->
+    <polygon points="0,10 0,70 40,50 40,-10" fill="url(#face3)" stroke="#00ff88" stroke-width="2"/>
+
+    <!-- Core glow -->
+    <circle cx="0" cy="20" r="15" fill="#ffffff" opacity="0.3">
+      <animate attributeName="opacity" values="0.2;0.5;0.2" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Agent label -->
+  <text x="100" y="170" font-family="Arial, sans-serif" font-size="14" font-weight="bold"
+        text-anchor="middle" fill="#00d4ff">AGENT</text>
+</svg>

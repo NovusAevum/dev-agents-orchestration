@@ -1,0 +1,49 @@
+<svg width="600" height="100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="barGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#ff00ff;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#00ff88;stop-opacity:1"/>
+    </linearGradient>
+
+    <filter id="barGlow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="600" height="100" fill="#0a0e27"/>
+
+  <!-- Progress bar background -->
+  <rect x="50" y="40" width="500" height="30" rx="15" fill="#1a1f3a" stroke="#2a3f5a" stroke-width="2"/>
+
+  <!-- Animated progress bar fill -->
+  <rect x="50" y="40" rx="15" height="30" fill="url(#barGradient)" filter="url(#barGlow)">
+    <animate attributeName="width" from="0" to="500" dur="3s" fill="freeze"/>
+  </rect>
+
+  <!-- Percentage text -->
+  <text x="300" y="62" text-anchor="middle" font-family="Arial Black" font-size="18" fill="#fff" font-weight="bold">
+    <animate attributeName="opacity" values="0;1" dur="0.5s" fill="freeze"/>
+    OPTIMIZATION: <tspan fill="#00ff88">
+      <animate attributeName="fill" values="#ff6b6b;#fdcb6e;#00ff88" dur="3s" fill="freeze"/>
+      40-60%
+    </tspan>
+  </text>
+
+  <!-- Sparkle effects -->
+  <g opacity="0.8">
+    <circle cx="100" cy="55" r="2" fill="#fff">
+      <animate attributeName="opacity" values="0;1;0" dur="1s" begin="0.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="250" cy="55" r="2" fill="#fff">
+      <animate attributeName="opacity" values="0;1;0" dur="1s" begin="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="450" cy="55" r="2" fill="#fff">
+      <animate attributeName="opacity" values="0;1;0" dur="1s" begin="2.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

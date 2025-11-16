@@ -1,0 +1,31 @@
+<svg width="1200" height="60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="divGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0" />
+      <stop offset="20%" style="stop-color:#00d4ff;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#ff00ff;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#00ff88;stop-opacity:1" />
+      <stop offset="80%" style="stop-color:#fdcb6e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fdcb6e;stop-opacity:0" />
+    </linearGradient>
+    <filter id="divGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="60" fill="transparent"/>
+
+  <!-- Main divider line -->
+  <line x1="0" y1="30" x2="1200" y2="30" stroke="url(#divGradient)" stroke-width="3" filter="url(#divGlow)"/>
+
+  <!-- Decorative diamonds -->
+  <g fill="url(#divGradient)" filter="url(#divGlow)">
+    <polygon points="300,30 305,25 310,30 305,35" />
+    <polygon points="600,30 608,22 616,30 608,38" />
+    <polygon points="900,30 905,25 910,30 905,35" />
+  </g>
+</svg>
