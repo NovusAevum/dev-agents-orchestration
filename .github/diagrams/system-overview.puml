@@ -1,0 +1,118 @@
+@startuml system-overview
+!theme cyborg-outline
+skinparam backgroundColor #0a0e27
+skinparam defaultFontColor #e0e0e0
+skinparam shadowing false
+skinparam linetype ortho
+
+' Title
+title <size:20><b>⚔️ Elite Dev Agents Orchestration - System Architecture</b></size>\n<size:12><i>"From the forge, precision emerges"</i></size>
+
+' User Interface Layer
+package "🖥️ User Interface Layer" as UI #1a1f3a {
+  component "Claude Code CLI" as CLI #00d4ff
+  component "Claude Desktop" as Desktop #00d4ff
+  component "Claude Web" as Web #00d4ff
+}
+
+' Orchestration Layer
+package "🎭 Orchestration Layer" as Orchestration #2a1f3a {
+  component "Master Orchestrator" as Master #ff6b6b
+  component "Agent Router" as Router #ff9068
+  component "Task Scheduler" as Scheduler #ffb347
+}
+
+' Agent Layer
+package "🤖 Agent Layer\n<size:10>12 Specialized Agents</size>" as Agents #1f2a3a {
+  component "auto-debugger" as Auto #4ecdc4
+  component "backend-api-agent" as Backend #45b7d1
+  component "elite-frontend-architect" as Frontend #96ceb4
+  component "production-refactor" as Refactor #a8e6cf
+  component "security-redteam" as Security #fd79a8
+  component "test-runner" as Test #fdcb6e
+  component "+6 more agents" as More #b8c5d6
+}
+
+' Skills Layer
+package "💡 Skills Layer\n<size:10>21 Specialized Skills</size>" as Skills #3a1f2a {
+  component "Architecture Patterns" as Arch #9b59b6
+  component "API Design" as API #8e44ad
+  component "Systematic Debugging" as Debug #6c3483
+  component "Prompt Engineering" as Prompt #5b2c6f
+  component "+17 more skills" as MoreSkills #c5b8d6
+}
+
+' MCP Layer
+package "🔌 MCP Server Layer\n<size:10>19 Sovereign Servers</size>" as MCP #1f3a2a {
+  component "Figma MCP" as Figma #2ecc71
+  component "GitHub MCP" as GitHub #27ae60
+  component "Supabase MCP" as Supabase #229954
+  component "Memory MCP" as Memory #1e8449
+  component "Search MCPs" as Search #16a085
+  component "Browser MCPs" as Browser #148f77
+  component "+13 more servers" as MoreMCP #b8d6c5
+}
+
+' External Services
+package "☁️ External Services" as External #3a2a1f {
+  database "Design\nFigma" as Design #e74c3c
+  database "Code\nGitHub" as Code #c0392b
+  database "Database\nSupabase" as DB #a93226
+  database "AI Services" as AI #922b21
+  cloud "Cloud Services" as Cloud #7b241c
+}
+
+' Connections - User to Orchestration
+CLI -down-> Master : <color:#00ff00><b>Commands</b></color>
+Desktop -down-> Master : <color:#00ff00><b>Tasks</b></color>
+Web -down-> Router : <color:#00ff00><b>Requests</b></color>
+
+' Orchestration Flow
+Master -right-> Router : <color:#ffff00><b>Route</b></color>
+Router -down-> Scheduler : <color:#ffff00><b>Schedule</b></color>
+
+' Scheduler to Agents (Parallel deployment)
+Scheduler -down-> Auto : <color:#ff00ff><b>Deploy</b></color>
+Scheduler -down-> Backend : <color:#ff00ff><b>Deploy</b></color>
+Scheduler -down-> Frontend : <color:#ff00ff><b>Deploy</b></color>
+Scheduler -down-> Refactor : <color:#ff00ff><b>Deploy</b></color>
+Scheduler -down-> Security : <color:#ff00ff><b>Deploy</b></color>
+Scheduler -down-> Test : <color:#ff00ff><b>Deploy</b></color>
+Scheduler -down-> More : <color:#ff00ff><b>Deploy</b></color>
+
+' Agents to Skills
+Auto -down-> Arch : <color:#00ffff><b>Load</b></color>
+Backend -down-> API : <color:#00ffff><b>Load</b></color>
+Frontend -down-> Debug : <color:#00ffff><b>Load</b></color>
+Refactor -down-> Prompt : <color:#00ffff><b>Load</b></color>
+Security -down-> MoreSkills : <color:#00ffff><b>Load</b></color>
+
+' Agents to MCPs
+Auto -down-> Figma : <color:#00ff88><b>Connect</b></color>
+Backend -down-> GitHub : <color:#00ff88><b>Connect</b></color>
+Frontend -down-> Supabase : <color:#00ff88><b>Connect</b></color>
+Refactor -down-> Memory : <color:#00ff88><b>Connect</b></color>
+Security -down-> Search : <color:#00ff88><b>Connect</b></color>
+Test -down-> Browser : <color:#00ff88><b>Connect</b></color>
+More -down-> MoreMCP : <color:#00ff88><b>Connect</b></color>
+
+' MCPs to External Services
+Figma -down-> Design : <color:#ff8800><b>API</b></color>
+GitHub -down-> Code : <color:#ff8800><b>API</b></color>
+Supabase -down-> DB : <color:#ff8800><b>API</b></color>
+Memory -down-> AI : <color:#ff8800><b>API</b></color>
+Search -down-> Cloud : <color:#ff8800><b>API</b></color>
+Browser -down-> Cloud : <color:#ff8800><b>API</b></color>
+
+' Legend
+legend right
+  |<#ff6b6b>   | <b>Master Orchestrator</b> - Central Command |
+  |<#4ecdc4>   | <b>Agents</b> - Domain Experts |
+  |<#9b59b6>   | <b>Skills</b> - Specialized Knowledge |
+  |<#2ecc71>   | <b>MCPs</b> - External Capabilities |
+  |<#e74c3c>   | <b>Services</b> - External APIs |
+endlegend
+
+footer <b>⚡ 300-500%% faster execution | 💰 40-60%% cost reduction | 🔒 Production-grade security</b>
+
+@enduml
