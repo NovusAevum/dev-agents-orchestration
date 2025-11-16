@@ -4,7 +4,7 @@
 <picture>
   <source media="(max-width: 600px)" srcset=".github/assets/hero-banner.svg" width="100%">
   <source media="(min-width: 601px)" srcset=".github/assets/hero-banner.svg" width="1200">
-  <img src=".github/assets/hero-banner.svg" alt="Elite Dev Agents Orchestration" width="1200">
+  <img src=".github/assets/hero-banner.svg" alt="Dev Agents Orchestration" width="1200">
 </picture>
 
 <br/>
@@ -24,7 +24,7 @@
 <!-- Quick Navigation with Icons -->
 <table>
 <tr>
-<td align="center"><a href="#-the-forge"><b>🔥 The Forge</b></a></td>
+<td align="center"><a href="#-about"><b>📖 About</b></a></td>
 <td align="center"><a href="#-architecture"><b>🏗️ Architecture</b></a></td>
 <td align="center"><a href="#-performance"><b>⚡ Performance</b></a></td>
 <td align="center"><a href="#-quick-start"><b>🚀 Quick Start</b></a></td>
@@ -38,90 +38,63 @@
 
 <img src=".github/assets/section-divider.svg" width="100%" alt="Section Divider">
 
-## 🔥 The Forge
+## 📖 About
 
-> ### *"In the crucible of chaos, where broken workflows once reigned, a system emerged—not from grand design, but from necessity. Forged by countless iterations at 3 AM, tempered by production fires, and refined by the relentless pursuit of precision."*
+This project is a configuration setup for Claude Code that coordinates multiple AI agents, skills, and external services (via MCP servers) to handle development tasks more efficiently.
 
-<div align="center">
+### What It Solves
 
-```
-    ╔═══════════════════════════════════════════════════════════════╗
-    ║                                                               ║
-    ║     In the shadows of code, where sparks of intelligence      ║
-    ║     ignite, autonomous agents converge—not as servants,       ║
-    ║     but as sovereign collaborators in a symphony of           ║
-    ║     orchestrated precision.                                   ║
-    ║                                                               ║
-    ║     This is not a tool. This is a forge.                      ║
-    ║                                                               ║
-    ╚═══════════════════════════════════════════════════════════════╝
-```
+Common friction points in AI-assisted development:
+- **Manual interruptions**: Permission prompts that break workflow concentration
+- **Token waste**: Verbose responses and loading unnecessary context
+- **Sequential bottlenecks**: Tasks that could run in parallel often don't
+- **Quality gaps**: Inconsistent testing and security practices
 
-</div>
+### Approach
 
-### 📖 The Origin Story
+The system uses:
+- **12 specialized agents** for different development domains (debugging, APIs, frontend, etc.)
+- **21 skill modules** with reusable patterns (architecture, testing, security, etc.)
+- **19 MCP servers** connecting to external services (GitHub, Figma, Supabase, etc.)
+- **Automated workflows** that combine agents for complex multi-step tasks
 
-Late one evening, amid frustrated debugging sessions and permission dialogs that shattered flow states, a simple question emerged: ***"What if AI agents could work like a well-organized team—autonomous, parallel, cost-conscious, and relentlessly focused on production quality?"***
-
-That question sparked **80+ repositories** of experimentation, countless hours of architectural refinement, and the synthesis of elite patterns from enterprise systems. The result? This orchestration system—a living embodiment of:
-
-- **Automation without interruption** (Zero permission prompts)
-- **Intelligence without waste** (40-60% token reduction)
-- **Speed without sacrifice** (300-500% faster execution)
-- **Quality without compromise** (Test-first, security-scanned, production-ready)
-
-### 👤 Forged By
+### 👤 Author
 
 **Wan Mohamad Hanis bin Wan Hassan**
 
-*Transdisciplinary architect synthesizing AI, cybersecurity, cloud infrastructure, and business intelligence into unified orchestration systems.*
+Developer focused on AI automation and cloud infrastructure.
 
-> *"The agent, like the craftsman, learns not from words alone—but from the fire of iteration, the weight of failure, and the precision of refinement."*
-
-- 🌐 **GitHub**: [@NovusAevum](https://github.com/NovusAevum) | 80+ repositories, forged through experimentation
-- 🎯 **Specialization**: AI Agent Orchestration • DevOps Automation • Enterprise Architecture
-- 🏆 **Philosophy**: Build. Iterate. Impact. Repeat. *Zero-BS, test-first, production-ready from day one.*
+- 🌐 **GitHub**: [@NovusAevum](https://github.com/NovusAevum)
+- 📧 **Contact**: Via GitHub
 
 <img src=".github/assets/section-divider.svg" width="100%" alt="Section Divider">
 
 ---
 
-## 🎯 The Problem & The Solution
+## 🎯 Problem & Solution
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### ❌ **Traditional AI-Assisted Development**
+### Before
 
-```diff
-- ⏸️  Manual permission prompts interrupting flow
-- 💸  Verbose, token-heavy responses draining budgets
-- 🐌  Sequential execution instead of parallelization
-- 🧠  No context persistence across sessions
-- 🎲  Inconsistent agent behaviors and outputs
-- 📊  No metrics, no optimization, no learning
-- 🔒  Security gaps and untested code
-```
-
-**Impact**: Developers spend more time managing AI than building products.
+- Permission prompts interrupt workflow
+- Verbose responses increase costs
+- Sequential execution is slow
+- No persistent context between sessions
+- Inconsistent code quality
 
 </td>
 <td width="50%" valign="top">
 
-### ✅ **Elite Orchestration System**
+### After
 
-```diff
-+ ⚡  Fully autonomous operation (zero interrupts)
-+ 💰  40-60% token reduction (smart context loading)
-+ 🚀  300-500% faster execution (parallel agents)
-+ 🧠  Cross-platform sync (Code, Desktop, Web)
-+ 🎯  Consistent, production-grade quality
-+ 📊  Comprehensive metrics and learning loops
-+ 🛡️  Security-first with mandatory gates
-```
-
-**Impact**: Developers focus on vision while agents handle execution.
+- Configurable permission bypass
+- Token optimization (estimated 40-60% reduction)
+- Parallel agent execution where applicable
+- MCP memory server for context
+- Validation gates (tests, security, build)
 
 </td>
 </tr>
@@ -129,10 +102,12 @@ That question sparked **80+ repositories** of experimentation, countless hours o
 
 <div align="center">
 
-### 🔥 From Chaos to Harmony: The Transformation
+### Performance Comparison
 
 <!-- Performance Comparison Chart using QuickChart.io -->
-<img src="https://quickchart.io/chart?c=%7B%0A%20%20type%3A%20%27bar%27%2C%0A%20%20data%3A%20%7B%0A%20%20%20%20labels%3A%20%5B%27Execution%20Speed%27%2C%20%27Token%20Efficiency%27%2C%20%27Cost%20Savings%27%2C%20%27Success%20Rate%27%5D%2C%0A%20%20%20%20datasets%3A%20%5B%7B%0A%20%20%20%20%20%20label%3A%20%27Before%20Optimization%27%2C%0A%20%20%20%20%20%20data%3A%20%5B100%2C%20100%2C%20100%2C%2065%5D%2C%0A%20%20%20%20%20%20backgroundColor%3A%20%27rgba%28214%2C%2048%2C%2049%2C%200.7)%27%2C%0A%20%20%20%20%20%20borderColor%3A%20%27%23d63031%27%2C%0A%20%20%20%20%20%20borderWidth%3A%202%0A%20%20%20%20%7D%2C%20%7B%0A%20%20%20%20%20%20label%3A%20%27After%20Optimization%27%2C%0A%20%20%20%20%20%20data%3A%20%5B400%2C%20160%2C%20160%2C%2087%5D%2C%0A%20%20%20%20%20%20backgroundColor%3A%20%27rgba%280%2C%20184%2C%20148%2C%200.7)%27%2C%0A%20%20%20%20%20%20borderColor%3A%20%27%2300b894%27%2C%0A%20%20%20%20%20%20borderWidth%3A%202%0A%20%20%20%20%7D%5D%0A%20%20%7D%2C%0A%20%20options%3A%20%7B%0A%20%20%20%20title%3A%20%7B%0A%20%20%20%20%20%20display%3A%20true%2C%0A%20%20%20%20%20%20text%3A%20%27Performance%20Transformation%20(Baseline%20%3D%20100%25)%27%2C%0A%20%20%20%20%20%20fontSize%3A%2018%2C%0A%20%20%20%20%20%20fontColor%3A%20%27%23e0e0e0%27%0A%20%20%20%20%7D%2C%0A%20%20%20%20plugins%3A%20%7B%0A%20%20%20%20%20%20datalabels%3A%20%7B%0A%20%20%20%20%20%20%20%20anchor%3A%20%27end%27%2C%0A%20%20%20%20%20%20%20%20align%3A%20%27top%27%2C%0A%20%20%20%20%20%20%20%20formatter%3A%20(value)%20%3D%3E%20value%20%2B%20%27%25%27%2C%0A%20%20%20%20%20%20%20%20font%3A%20%7B%20weight%3A%20%27bold%27%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%2C%0A%20%20%20%20scales%3A%20%7B%0A%20%20%20%20%20%20yAxes%3A%20%5B%7B%0A%20%20%20%20%20%20%20%20ticks%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20beginAtZero%3A%20true%2C%0A%20%20%20%20%20%20%20%20%20%20fontColor%3A%20%27%23e0e0e0%27%0A%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20gridLines%3A%20%7B%20color%3A%20%27rgba%28255%2C%20255%2C%20255%2C%200.1)%27%20%7D%0A%20%20%20%20%20%20%7D%5D%2C%0A%20%20%20%20%20%20xAxes%3A%20%5B%7B%0A%20%20%20%20%20%20%20%20ticks%3A%20%7B%20fontColor%3A%20%27%23e0e0e0%27%20%7D%2C%0A%20%20%20%20%20%20%20%20gridLines%3A%20%7B%20color%3A%20%27rgba%28255%2C%20255%2C%20255%2C%200.1)%27%20%7D%0A%20%20%20%20%20%20%7D%5D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D&backgroundColor=rgba(10,14,39,1)&width=800&height=400" alt="Performance Transformation Chart" width="100%" style="max-width:800px;">
+<img src="https://quickchart.io/chart?c=%7B%0A%20%20type%3A%20%27bar%27%2C%0A%20%20data%3A%20%7B%0A%20%20%20%20labels%3A%20%5B%27Execution%20Speed%27%2C%20%27Token%20Efficiency%27%2C%20%27Cost%20Savings%27%2C%20%27Success%20Rate%27%5D%2C%0A%20%20%20%20datasets%3A%20%5B%7B%0A%20%20%20%20%20%20label%3A%20%27Before%27%2C%0A%20%20%20%20%20%20data%3A%20%5B100%2C%20100%2C%20100%2C%2065%5D%2C%0A%20%20%20%20%20%20backgroundColor%3A%20%27rgba%28214%2C%2048%2C%2049%2C%200.7)%27%0A%20%20%20%20%7D%2C%20%7B%0A%20%20%20%20%20%20label%3A%20%27After%27%2C%0A%20%20%20%20%20%20data%3A%20%5B400%2C%20160%2C%20160%2C%2087%5D%2C%0A%20%20%20%20%20%20backgroundColor%3A%20%27rgba%280%2C%20184%2C%20148%2C%200.7)%27%0A%20%20%20%20%7D%5D%0A%20%20%7D%0A%7D&backgroundColor=rgba(10,14,39,1)&width=800&height=400" alt="Performance Chart" width="100%" style="max-width:800px;">
+
+*Measurements based on internal testing. Actual results may vary.*
 
 </div>
 
@@ -140,59 +115,35 @@ That question sparked **80+ repositories** of experimentation, countless hours o
 
 ---
 
-## 💭 The Philosophy: Three Pillars
-
-<div align="center">
-
-### 🔥 ***"Build. Iterate. Impact. Repeat."*** 🔥
-
-</div>
+## 💭 Design Principles
 
 <table>
 <tr>
 <td width="33%" align="center" valign="top">
 
-### ⚡ **I. Autonomous by Design**
+### ⚡ Reduce Friction
 
 <img src=".github/assets/3d-cube-agent.svg" width="150" alt="Autonomous Agent">
 
-No interruptions.<br/>
-No confirmations.<br/>
-No permission dialogs.
-
-Agents operate with **full autonomy** within secure guardrails, executing tasks from start to finish while you focus on strategy.
-
-> *"The forge does not ask permission to temper steel."*
+Configure permission settings to minimize manual confirmations for common operations (file edits, git commands, package installs).
 
 </td>
 <td width="33%" align="center" valign="top">
 
-### 💰 **II. Cost-Optimized Intelligence**
+### 💰 Optimize Costs
 
-<img src=".github/assets/3d-cube-agent.svg" width="150" alt="Intelligent Optimization">
+<img src=".github/assets/3d-cube-agent.svg" width="150" alt="Cost Optimization">
 
-Every token counts.<br/>
-Every operation measured.<br/>
-Every decision optimized.
-
-Smart context loading, incremental operations, and intelligent model selection achieve **40-60% cost reduction** without sacrificing capability.
-
-> *"Precision is the art of achieving more with less."*
+Use techniques like lazy context loading, incremental edits, and appropriate model selection to reduce token consumption.
 
 </td>
 <td width="33%" align="center" valign="top">
 
-### 🛡️ **III. Production-First Mindset**
+### 🛡️ Maintain Quality
 
-<img src=".github/assets/3d-cube-agent.svg" width="150" alt="Production Quality">
+<img src=".github/assets/3d-cube-agent.svg" width="150" alt="Quality">
 
-No mock code.<br/>
-No placeholders.<br/>
-No compromises.
-
-Every output is **production-ready**: tested, security-scanned, documented, and aligned with enterprise patterns from day one.
-
-> *"What leaves the forge must withstand the fire of production."*
+Include testing, security scanning (Semgrep), and validation steps to catch issues early.
 
 </td>
 </tr>
@@ -204,11 +155,11 @@ Every output is **production-ready**: tested, security-scanned, documented, and 
 
 ## 🏗️ Architecture
 
-> ### *"Like a master blacksmith coordinates apprentices, the orchestrator deploys agents in parallel—each sovereign in their domain, united in purpose."*
+The system has five layers:
 
 <div align="center">
 
-### 🎭 System Overview: The Sovereign Swarm
+### System Overview
 
 <!-- Multiple Diagram Formats for Maximum Compatibility and Visual Appeal -->
 
@@ -398,44 +349,20 @@ graph LR
     style D fill:#00d4ff,stroke:#0099cc,color:#000
 ```
 
-1. **⚒️ Planning Phase** *(The Forge Awakens)*
-   - Task analysis and requirement extraction
-   - Atomic task decomposition
-   - Optimal agent selection
-   - Execution mode determination (Default/Advanced/Elite)
-   - Token budget estimation
-
-2. **⚔️ Execution Phase** *(The Swarm Strikes)*
-   - **Parallel agent deployment** (up to 12 agents simultaneously)
-   - Dynamic skill loading per agent
-   - MCP server connections for enhanced context
-   - Real-time progress aggregation
-   - **300-500% faster than sequential execution**
-
-3. **🛡️ Validation Phase** *(The Tempering)*
-   - Test coverage verification (>80% required)
-   - Security scanning (zero critical vulnerabilities)
-   - Build success confirmation
-   - Performance benchmark validation
-   - Quality gate enforcement
-
-4. **📊 Delivery Phase** *(The Masterpiece)*
-   - Result consolidation
-   - Narrative generation
-   - Metrics logging (execution time, tokens, quality scores)
-   - User-friendly summary
+1. **Planning** - Analyze requirements, select agents, estimate tokens
+2. **Execution** - Deploy agents (parallel when appropriate)
+3. **Validation** - Run tests, security scans, check quality gates
+4. **Delivery** - Consolidate results, generate summary
 
 <img src=".github/assets/section-divider.svg" width="100%" alt="Section Divider">
 
 ---
 
-## 🤖 The 12 Agents
-
-> ### *"Each agent, a master of their craft. Together, an unstoppable force."*
+## 🤖 Agents
 
 <div align="center">
 
-### 🎯 Intelligent Agent Selection
+### Agent Selection
 
 <!-- Decision Tree Diagram -->
 ![Agent Selection](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/NovusAevum/dev-agents-orchestration/claude/redesign-readme-visuals-015FxNm8JT3AXtyQB8kipCp3/.github/diagrams/decision-tree.puml)
@@ -859,13 +786,13 @@ User: "Create an AI-powered marketing analytics platform with Palantir-level UI"
 
 ---
 
-## 💡 The 21 Skills
+## 💡 Skills
 
-> ### *"Skills are the knowledge forged into reusable patterns—loaded only when the fire demands it."*
+Skills are reusable knowledge modules loaded on-demand to reduce token usage.
 
 <div align="center">
 
-### 🎓 Skills Architecture: Lazy-Loaded Expertise
+### Skills Distribution
 
 <!-- Skills Ecosystem Visualization -->
 <img src="https://quickchart.io/chart?c=%7B%0A%20%20type%3A%20%27doughnut%27%2C%0A%20%20data%3A%20%7B%0A%20%20%20%20labels%3A%20%5B%27Architecture%20%26%20Design%27%2C%20%27Development%20%26%20API%27%2C%20%27Testing%20%26%20Quality%27%2C%20%27Security%20%26%20Compliance%27%2C%20%27Performance%20%26%20Optimization%27%2C%20%27Advanced%20Techniques%27%5D%2C%0A%20%20%20%20datasets%3A%20%5B%7B%0A%20%20%20%20%20%20data%3A%20%5B6%2C%205%2C%204%2C%203%2C%202%2C%201%5D%2C%0A%20%20%20%20%20%20backgroundColor%3A%20%5B%27%239b59b6%27%2C%20%27%234ecdc4%27%2C%20%27%23fdcb6e%27%2C%20%27%23fd79a8%27%2C%20%27%2300b894%27%2C%20%27%23ff6b6b%27%5D%2C%0A%20%20%20%20%20%20borderColor%3A%20%27%230a0e27%27%2C%0A%20%20%20%20%20%20borderWidth%3A%203%0A%20%20%20%20%7D%5D%0A%20%20%7D%2C%0A%20%20options%3A%20%7B%0A%20%20%20%20title%3A%20%7B%0A%20%20%20%20%20%20display%3A%20true%2C%0A%20%20%20%20%20%20text%3A%20%2721%20Specialized%20Skills%20Distribution%27%2C%0A%20%20%20%20%20%20fontSize%3A%2020%2C%0A%20%20%20%20%20%20fontColor%3A%20%27%23e0e0e0%27%0A%20%20%20%20%7D%2C%0A%20%20%20%20legend%3A%20%7B%0A%20%20%20%20%20%20labels%3A%20%7B%20fontColor%3A%20%27%23e0e0e0%27%2C%20fontSize%3A%2012%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D&backgroundColor=rgba(10,14,39,1)&width=600&height=400" alt="Skills Distribution" width="100%" style="max-width:600px;">
@@ -974,13 +901,13 @@ User: "Create an AI-powered marketing analytics platform with Palantir-level UI"
 
 ---
 
-## 🔌 The 19 MCP Servers
+## 🔌 MCP Servers
 
-> ### *"MCPs are not mere tools—they are sovereign gateways, each a conduit to specialized intelligence beyond the forge."*
+MCP (Model Context Protocol) servers provide connections to external services and data sources.
 
 <div align="center">
 
-### 🌐 MCP Ecosystem: External Capabilities
+### External Capabilities
 
 </div>
 
@@ -1164,7 +1091,7 @@ Framework learning, API reference, best practices
 <tr>
 <td colspan="3">
 
-> *"Knowledge is the fuel of the forge—these servers ensure agents never work with stale or incomplete information."*
+*These servers provide up-to-date information for agents.*
 
 </td>
 </tr>
@@ -1292,7 +1219,7 @@ Code review assistance, content moderation
 <tr>
 <td colspan="3">
 
-> *"Security is not an afterthought—it's tempered into every line of code from the first spark."*
+*Security scanning and validation are built into the workflow.*
 
 </td>
 </tr>
@@ -1466,11 +1393,9 @@ MCPs configured in **Claude Desktop** automatically sync to **Claude Code** on t
 
 ## ⚡ Performance
 
-> ### *"In the forge, speed is not sacrificed for quality—both are tempered together into unbreakable excellence."*
-
 <div align="center">
 
-### 📊 The Transformation: Before vs After
+### Before vs After
 
 <!-- Animated Agent Swarm Visualization -->
 <img src=".github/assets/animated-agent-swarm.svg" alt="Parallel Agent Deployment" width="100%" style="max-width:800px;">
@@ -2279,9 +2204,7 @@ src/
 
 ## 🤝 Contributing
 
-> ### *"The forge grows stronger with each craftsman who adds their spark to the fire."*
-
-We welcome contributions from the community! Whether it's new agents, skills, MCP integrations, or bug fixes—your expertise enhances the entire ecosystem.
+Contributions are welcome! Whether it's new agents, skills, MCP integrations, or bug fixes.
 
 ### 🌟 Ways to Contribute
 
@@ -2373,15 +2296,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 <img src=".github/assets/animated-wave-divider.svg" alt="Animated Divider" width="100%">
 
-### 🔥 ***Forged by Automation. Tempered by Precision.*** 🔥
-
-<img src=".github/assets/animated-agent-swarm.svg" alt="Agent Swarm" width="600">
-
 ---
 
-**Built with ❤️ by [Wan Mohamad Hanis bin Wan Hassan](https://github.com/NovusAevum)**
-
-*Transdisciplinary Strategist | AI + Security + Cloud + Business Intelligence*
+**Built by [Wan Mohamad Hanis bin Wan Hassan](https://github.com/NovusAevum)**
 
 [![GitHub](https://img.shields.io/badge/GitHub-@NovusAevum-00d4ff?style=for-the-badge&logo=github)](https://github.com/NovusAevum)
 [![MIT License](https://img.shields.io/badge/License-MIT-00ff88?style=for-the-badge)](https://opensource.org/licenses/MIT)
@@ -2392,10 +2309,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ---
 
-<img src=".github/assets/hero-banner.svg" alt="Elite Dev Agents" width="800">
+<img src=".github/assets/hero-banner.svg" alt="Dev Agents Orchestration" width="800">
 
-**🚀 Ready to 10x your development velocity?**
+**🚀 Get Started**
 
-[Get Started](#-quick-start) • [View Architecture](#-architecture) • [Explore Agents](#-the-12-agents)
+[Quick Start](#-quick-start) • [Architecture](#-architecture) • [Agents](#-agents)
 
 </div>
