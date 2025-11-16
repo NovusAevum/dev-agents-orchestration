@@ -337,17 +337,12 @@ External capabilities and data sources
 
 **The Four Phases:**
 
-```mermaid
-graph LR
-    A[⚒️ PLANNING<br/>Analyze & Decompose] --> B[⚔️ EXECUTION<br/>Parallel Deployment]
-    B --> C[🛡️ VALIDATION<br/>Quality Gates]
-    C --> D[📊 DELIVERY<br/>Results & Metrics]
+<div align="center">
 
-    style A fill:#ffff00,stroke:#f39c12,color:#000
-    style B fill:#00ff88,stroke:#00b894,color:#000
-    style C fill:#ff00ff,stroke:#9b59b6,color:#fff
-    style D fill:#00d4ff,stroke:#0099cc,color:#000
-```
+<!-- Workflow Phase Diagram -->
+<img src="https://mermaid.ink/img/Z3JhcGggTFIKICAgIEFb4pqS77iPIFBMQU5OSU5HPGJyLz5BbmFseXplICYgRGVjb21wb3NlXSAtLT4gQlvimpTvuI8gRVhFQ1VUSU9OPGJyLz5QYXJhbGxlbCBEZXBsb3ltZW50XQogICAgQiAtLT4gQ1vwn5uh77iPIFZBTElEQVRJT048YnIvPlF1YWxpdHkgR2F0ZXNdCiAgICBDIC0tPiBEW_Cfk4ogREVMSVZFUlk8YnIvPlJlc3VsdHMgJiBNZXRyaWNzXQoKICAgIHN0eWxlIEEgZmlsbDojZmZmZjAwLHN0cm9rZTojZjM5YzEyLGNvbG9yOiMwMDAKICAgIHN0eWxlIEIgZmlsbDojMDBmZjg4LHN0cm9rZTojMDBiODk0LGNvbG9yOiMwMDAKICAgIHN0eWxlIEMgZmlsbDojZmYwMGZmLHN0cm9rZTojOWI1OWI2LGNvbG9yOiNmZmYKICAgIHN0eWxlIEQgZmlsbDojMDBkNGZmLHN0cm9rZTojMDA5OWNjLGNvbG9yOiMwMDAK?type=png" alt="Four Phase Workflow" width="100%" style="max-width:700px;">
+
+</div>
 
 1. **Planning** - Analyze requirements, select agents, estimate tokens
 2. **Execution** - Deploy agents (parallel when appropriate)
@@ -726,59 +721,47 @@ All MCPs, All Agents
 <details>
 <summary><b>🔀 Pattern 1: Sequential Handoff</b> - For error correction workflows</summary>
 
-```
-User: "Fix the authentication bug in login.ts"
+**Example:** "Fix the authentication bug in login.ts"
 
-  🔧 auto-debugger (identifies root cause)
-      ↓
-  🏗️ production-refactor (applies fix with optimization)
-      ↓
-  🧪 test-runner (validates fix + adds regression tests)
-      ↓
-  🛡️ security-redteam-agent (security audit)
-      ↓
-  ✅ Results delivered (45 seconds total)
-```
+<div align="center">
+
+<img src="https://mermaid.ink/img/Z3JhcGggVEQKICAgIFVzZXJb8J+RpCBVc2VyIFJlcXVlc3Q6PGJyLz5GaXggYXV0aCBidWddIC0tPiBBW/CflKcgYXV0by1kZWJ1Z2dlcjxici8+SWRlbnRpZmllcyByb290IGNhdXNlXQogICAgQSAtLT4gQlvwn4+X77iPIHByb2R1Y3Rpb24tcmVmYWN0b3I8YnIvPkFwcGxpZXMgZml4ICsgb3B0aW1pemF0aW9uXQogICAgQiAtLT4gQ1vwn6eqIHRlc3QtcnVubmVyPGJyLz5WYWxpZGF0ZXMgKyByZWdyZXNzaW9uIHRlc3RzXQogICAgQyAtLT4gRFvwn5uh77iPIHNlY3VyaXR5LXJlZHRlYW0tYWdlbnQ8YnIvPlNlY3VyaXR5IGF1ZGl0XQogICAgRCAtLT4gRVvinIUgUmVzdWx0cyBkZWxpdmVyZWQ8YnIvPjQ1IHNlY29uZHMgdG90YWxdCiAgICAKICAgIHN0eWxlIFVzZXIgZmlsbDojZTBlMGUwLHN0cm9rZTojMzMzLGNvbG9yOiMwMDAKICAgIHN0eWxlIEEgZmlsbDojNGVjZGM0LHN0cm9rZTojMmE5ZDhmLGNvbG9yOiMwMDAKICAgIHN0eWxlIEIgZmlsbDojYThlNmNmLHN0cm9rZTojNTZhYjkxLGNvbG9yOiMwMDAKICAgIHN0eWxlIEMgZmlsbDojZmRjYjZlLHN0cm9rZTojZTE3MDU1LGNvbG9yOiMwMDAKICAgIHN0eWxlIEQgZmlsbDojZmQ3OWE4LHN0cm9rZTojZTg0MzkzLGNvbG9yOiMwMDAKICAgIHN0eWxlIEUgZmlsbDojMDBmZjg4LHN0cm9rZTojMDBiODk0LGNvbG9yOiMwMDAK?type=png" alt="Sequential Handoff Pattern" width="100%" style="max-width:500px;">
+
+</div>
+
+**Flow:** auto-debugger → production-refactor → test-runner → security-redteam-agent → Results (45s)
 
 </details>
 
 <details>
 <summary><b>⚡ Pattern 2: Parallel Execution</b> - For multi-domain tasks</summary>
 
-```
-User: "Build a payment API with rate limiting and comprehensive testing"
+**Example:** "Build a payment API with rate limiting and comprehensive testing"
 
-  ┌─ 🔌 backend-api-agent (API implementation + OpenAPI docs)
-  ├─ 🛡️ security-redteam-agent (auth + rate limiting + encryption)
-  ├─ 🧪 test-runner (unit + integration + contract tests)
-  └─ 🏗️ production-refactor (code optimization + type safety)
+<div align="center">
 
-  All agents run simultaneously → Results merge in 15 seconds
-  (vs 60+ seconds sequential)
-```
+<img src="https://mermaid.ink/img/Z3JhcGggVEIKICAgIFVzZXJb8J+RpCBVc2VyIFJlcXVlc3Q6PGJyLz5CdWlsZCBwYXltZW50IEFQSV0gLS0+IE1hc3RlclvimqEgUGFyYWxsZWwgRXhlY3V0aW9uXQogICAgTWFzdGVyIC0tPiBBW/CflIwgYmFja2VuZC1hcGktYWdlbnQ8YnIvPkFQSSArIE9wZW5BUEkgZG9jc10KICAgIE1hc3RlciAtLT4gQlvwn5uh77iPIHNlY3VyaXR5LXJlZHRlYW0tYWdlbnQ8YnIvPkF1dGggKyByYXRlIGxpbWl0aW5nXQogICAgTWFzdGVyIC0tPiBDW/Cfp6ogdGVzdC1ydW5uZXI8YnIvPlVuaXQgKyBpbnRlZ3JhdGlvbiB0ZXN0c10KICAgIE1hc3RlciAtLT4gRFvwn4+X77iPIHByb2R1Y3Rpb24tcmVmYWN0b3I8YnIvPk9wdGltaXphdGlvbiArIHR5cGVzXQogICAgQSAtLT4gTWVyZ2Vb8J+UhCBNZXJnZSBSZXN1bHRzXQogICAgQiAtLT4gTWVyZ2UKICAgIEMgLS0+IE1lcmdlCiAgICBEIC0tPiBNZXJnZQogICAgTWVyZ2UgLS0+IFJlc3VsdFvinIUgQ29tcGxldGUgaW4gMTVzPGJyLz52cyA2MHMgc2VxdWVudGlhbF0KICAgIAogICAgc3R5bGUgVXNlciBmaWxsOiNlMGUwZTAsc3Ryb2tlOiMzMzMsY29sb3I6IzAwMAogICAgc3R5bGUgTWFzdGVyIGZpbGw6I2ZmNmI2YixzdHJva2U6I2Q2MzAzMSxjb2xvcjojZmZmCiAgICBzdHlsZSBBIGZpbGw6IzQ1YjdkMSxzdHJva2U6IzA5ODRlMyxjb2xvcjojMDAwCiAgICBzdHlsZSBCIGZpbGw6I2ZkNzlhOCxzdHJva2U6I2U4NDM5Myxjb2xvcjojMDAwCiAgICBzdHlsZSBDIGZpbGw6I2ZkY2I2ZSxzdHJva2U6I2UxNzA1NSxjb2xvcjojMDAwCiAgICBzdHlsZSBEIGZpbGw6I2E4ZTZjZixzdHJva2U6IzU2YWI5MSxjb2xvcjojMDAwCiAgICBzdHlsZSBNZXJnZSBmaWxsOiM5YjU5YjYsc3Ryb2tlOiM2YzM0ODMsY29sb3I6I2ZmZgogICAgc3R5bGUgUmVzdWx0IGZpbGw6IzAwZmY4OCxzdHJva2U6IzAwYjg5NCxjb2xvcjojMDAwCg==?type=png" alt="Parallel Execution Pattern" width="100%" style="max-width:600px;">
+
+</div>
+
+**Flow:** All 4 agents run simultaneously → Results merge in 15 seconds (vs 60+ seconds sequential)
 
 </details>
 
 <details>
 <summary><b>🌟 Pattern 3: Master Orchestration (Elite Mode)</b> - For complex, multi-domain challenges</summary>
 
-```
-User: "Create an AI-powered marketing analytics platform with Palantir-level UI"
+**Example:** "Create an AI-powered marketing analytics platform with Palantir-level UI"
 
-  🎭 Master Orchestrator deploys:
-      ├─ 🏛️ codebase-architect (system design: Clean Architecture + DDD)
-      ├─ 🔌 backend-api-agent (REST APIs + WebSocket streaming + ML endpoints)
-      ├─ 🎨 elite-frontend-architect (Palantir-inspired dashboard UI)
-      ├─ 🎯 frontend-specialist-agent (D3.js visualizations + interactions)
-      ├─ ☁️ cloud-architect-agent (AWS infra: Lambda + API Gateway + S3 + CloudFront)
-      ├─ 🛡️ security-redteam-agent (threat model + encryption + RBAC)
-      ├─ 🧪 test-runner (E2E Playwright tests + load testing)
-      ├─ 🏗️ production-refactor (performance optimization)
-      └─ 🔧 auto-debugger (real-time issue resolution during integration)
+<div align="center">
 
-  Result: Production-ready platform in 2-3 minutes (vs 30+ minutes sequential)
-  Fusion domains: Marketing + AI + Cybersecurity + Data Visualization
-```
+<img src="https://mermaid.ink/img/Z3JhcGggVEIKICAgIFVzZXJb8J+RpCBVc2VyIFJlcXVlc3Q6PGJyLz5BSSBtYXJrZXRpbmcgcGxhdGZvcm1dIC0tPiBNYXN0ZXJb8J+OrSBNYXN0ZXIgT3JjaGVzdHJhdG9yPGJyLz5FbGl0ZSBNb2RlXQogICAgTWFzdGVyIC0tPiBBMVvwn4+b77iPIGNvZGViYXNlLWFyY2hpdGVjdDxici8+U3lzdGVtIGRlc2lnbl0KICAgIE1hc3RlciAtLT4gQTJb8J+UjCBiYWNrZW5kLWFwaS1hZ2VudDxici8+UkVTVCArIFdlYlNvY2tldCArIE1MXQogICAgTWFzdGVyIC0tPiBBM1vwn46oIGVsaXRlLWZyb250ZW5kLWFyY2hpdGVjdDxici8+UGFsYW50aXIgZGFzaGJvYXJkXQogICAgTWFzdGVyIC0tPiBBNFvwn46vIGZyb250ZW5kLXNwZWNpYWxpc3QtYWdlbnQ8YnIvPkQzLmpzIHZpc3VhbGl6YXRpb25zXQogICAgTWFzdGVyIC0tPiBBNVvimIHvuI8gY2xvdWQtYXJjaGl0ZWN0LWFnZW50PGJyLz5BV1MgaW5mcmFzdHJ1Y3R1cmVdCiAgICBNYXN0ZXIgLS0+IEE2W/Cfm6HvuI8gc2VjdXJpdHktcmVkdGVhbS1hZ2VudDxici8+VGhyZWF0IG1vZGVsICsgUkJBQ10KICAgIE1hc3RlciAtLT4gQTdb8J+nqiB0ZXN0LXJ1bm5lcjxici8+RTJFICsgbG9hZCB0ZXN0c10KICAgIE1hc3RlciAtLT4gQThb8J+Pl++4jyBwcm9kdWN0aW9uLXJlZmFjdG9yPGJyLz5QZXJmb3JtYW5jZSB0dW5pbmddCiAgICBNYXN0ZXIgLS0+IEE5W/CflKcgYXV0by1kZWJ1Z2dlcjxici8+SXNzdWUgcmVzb2x1dGlvbl0KICAgIAogICAgQTEgLS0+IFJlc3VsdFvinIUgUHJvZHVjdGlvbi1yZWFkeTxici8+Mi0zIG1pbnV0ZXNdCiAgICBBMiAtLT4gUmVzdWx0CiAgICBBMyAtLT4gUmVzdWx0CiAgICBBNCAtLT4gUmVzdWx0CiAgICBBNSAtLT4gUmVzdWx0CiAgICBBNiAtLT4gUmVzdWx0CiAgICBBNyAtLT4gUmVzdWx0CiAgICBBOCAtLT4gUmVzdWx0CiAgICBBOSAtLT4gUmVzdWx0CiAgICAKICAgIHN0eWxlIFVzZXIgZmlsbDojZTBlMGUwLHN0cm9rZTojMzMzLGNvbG9yOiMwMDAKICAgIHN0eWxlIE1hc3RlciBmaWxsOiNmZjZiNmIsc3Ryb2tlOiNkNjMwMzEsY29sb3I6I2ZmZixzdHJva2Utd2lkdGg6M3B4CiAgICBzdHlsZSBBMSBmaWxsOiM5YjU5YjYsc3Ryb2tlOiM2YzM0ODMsY29sb3I6I2ZmZgogICAgc3R5bGUgQTIgZmlsbDojNDViN2QxLHN0cm9rZTojMDk4NGUzLGNvbG9yOiMwMDAKICAgIHN0eWxlIEEzIGZpbGw6Izk2Y2ViNCxzdHJva2U6IzU2YWI5MSxjb2xvcjojMDAwCiAgICBzdHlsZSBBNCBmaWxsOiM0ZWNkYzQsc3Ryb2tlOiMyYTlkOGYsY29sb3I6IzAwMAogICAgc3R5bGUgQTUgZmlsbDojNzRiOWZmLHN0cm9rZTojMDk4NGUzLGNvbG9yOiMwMDAKICAgIHN0eWxlIEE2IGZpbGw6I2ZkNzlhOCxzdHJva2U6I2U4NDM5Myxjb2xvcjojMDAwCiAgICBzdHlsZSBBNyBmaWxsOiNmZGNiNmUsc3Ryb2tlOiNlMTcwNTUsY29sb3I6IzAwMAogICAgc3R5bGUgQTggZmlsbDojYThlNmNmLHN0cm9rZTojNTZhYjkxLGNvbG9yOiMwMDAKICAgIHN0eWxlIEE5IGZpbGw6IzRlY2RjNCxzdHJva2U6IzJhOWQ4Zixjb2xvcjojMDAwCiAgICBzdHlsZSBSZXN1bHQgZmlsbDojMDBmZjg4LHN0cm9rZTojMDBiODk0LGNvbG9yOiMwMDAsc3Ryb2tlLXdpZHRoOjNweAo=?type=png" alt="Master Orchestration Pattern" width="100%" style="max-width:700px;">
+
+</div>
+
+**Flow:** Master Orchestrator deploys all 9 agents in parallel → Production-ready platform in 2-3 minutes (vs 30+ minutes sequential)
+
+**Domains fused:** Marketing + AI + Cybersecurity + Data Visualization
 
 </details>
 
