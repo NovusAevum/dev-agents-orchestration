@@ -932,8 +932,8 @@ mindmap
 GITHUB_PERSONAL_ACCESS_TOKEN=ghp_xxxxxxxxxxxx
 
 # Supabase MCP
-SUPABASE_URL=https://xxxxxxxxxxxx.supabase.co
-SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+SUPABASE_URL=https://your-project-id.supabase.co
+SUPABASE_SERVICE_ROLE_KEY=your_service_role_key_here
 
 # Search Services
 BRAVE_API_KEY=BSA_xxxxxxxxxxxx
