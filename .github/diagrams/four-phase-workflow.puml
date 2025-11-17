@@ -1,0 +1,29 @@
+@startuml
+!theme mars
+
+title <size:18><b>Four-Phase Execution Workflow</b></size>
+
+skinparam activity {
+  BackgroundColor<< Planning >> #ffff00
+  BorderColor<< Planning >> #f39c12
+  BackgroundColor<< Execution >> #00ff88
+  BorderColor<< Execution >> #00b894
+  BackgroundColor<< Validation >> #ff00ff
+  BorderColor<< Validation >> #9b59b6
+  BackgroundColor<< Delivery >> #00d4ff
+  BorderColor<< Delivery >> #0099cc
+}
+
+start
+
+:⚒️ **PLANNING**\nAnalyze & Decompose] << Planning >>
+
+:⚡ **EXECUTION**\nParallel Deployment] << Execution >>
+
+:🛡️ **VALIDATION**\nQuality Gates] << Validation >>
+
+:📊 **DELIVERY**\nResults & Metrics] << Delivery >>
+
+stop
+
+@enduml

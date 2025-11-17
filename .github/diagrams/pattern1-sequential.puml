@@ -1,0 +1,24 @@
+@startuml
+!theme mars
+
+title <size:16><b>Pattern 1: Sequential Handoff</b></size>\n<size:12>Error correction workflow</size>
+
+skinparam node {
+  BackgroundColor #4ecdc4
+  BorderColor #2a9d8f
+}
+
+actor "👤 User" as User #e0e0e0
+node "🔧 auto-debugger\nIdentifies root cause" as A #4ecdc4
+node "🏗️ production-refactor\nApplies fix + optimization" as B #a8e6cf
+node "🧪 test-runner\nValidates + regression tests" as C #fdcb6e
+node "🛡️ security-redteam-agent\nSecurity audit" as D #fd79a8
+node "✅ Results delivered\n45 seconds total" as E #00ff88
+
+User --> A : Fix auth bug
+A --> B
+B --> C
+C --> D
+D --> E
+
+@enduml
