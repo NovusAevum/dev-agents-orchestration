@@ -1,0 +1,40 @@
+@startuml
+!theme mars
+
+title <size:18><b>Debug Workflow - Four-Phase Systematic Debugging</b></size>
+
+start
+
+:Bug Report;
+
+partition "**Phase 1: Root Cause**" #4ecdc4 {
+  :Grep: Error patterns;
+  :Read: Failing code;
+  :Analyze: Stack traces;
+}
+
+partition "**Phase 2: Pattern Analysis**" #45b7d1 {
+  :Memory MCP: Historical bugs;
+  :GitHub MCP: Code context;
+  :Identify: Similar patterns;
+}
+
+partition "**Phase 3: Hypothesis**" #96ceb4 {
+  :Generate: Fix candidates;
+  :Evaluate: Impact scope;
+  :Select: Optimal solution;
+}
+
+partition "**Phase 4: Implementation**" #fdcb6e {
+  :Apply fix;
+  :Run tests;
+}
+
+if (Tests Pass?) then (yes)
+  :Success;
+  stop
+else (no)
+  backward:Retry with new approach;
+endif
+
+@enduml

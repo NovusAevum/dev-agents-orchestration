@@ -1,0 +1,45 @@
+@startuml
+!theme mars
+
+title <size:18><b>Master Orchestrator Workflow - State Diagram</b></size>
+
+[*] --> AnalyzeTask
+AnalyzeTask --> DecomposeRequirements
+DecomposeRequirements --> MapAgents : Identify Required\nExpertise
+
+MapAgents --> ParallelExecution : Deploy Agent Pool
+
+state ParallelExecution {
+  [*] --> AutoDebugger
+  [*] --> BackendAPI
+  [*] --> FrontendElite
+  [*] --> CloudArch
+  [*] --> SecurityRT
+  [*] --> TestRunner
+  
+  AutoDebugger : Bug Detection
+  BackendAPI : API Development  
+  FrontendElite : UI Architecture
+  CloudArch : Infrastructure
+  SecurityRT : Threat Analysis
+  TestRunner : Quality Gates
+}
+
+ParallelExecution --> AggregateResults
+AggregateResults --> ValidateQuality
+ValidateQuality --> GenerateNarrative
+GenerateNarrative --> [*]
+
+note right of ParallelExecution
+  **All agents run simultaneously**
+  300-500% faster than sequential
+end note
+
+note right of ValidateQuality
+  • Test coverage > 80%
+  • Security score > 85
+  • Performance benchmarks pass
+  • Zero critical vulnerabilities
+end note
+
+@enduml

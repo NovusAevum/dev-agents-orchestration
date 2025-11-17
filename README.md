@@ -932,6 +932,13 @@ The system provides four specialized workflows that coordinate multiple agents f
 **Agents Coordinated:** All 12 agents
 **Execution Pattern:** Dynamic parallel deployment
 
+<div align="center">
+
+<!-- PlantUML Master Orchestrator Workflow -->
+<img src="http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/NovusAevum/dev-agents-orchestration/claude/redesign-readme-visuals-015FxNm8JT3AXtyQB8kipCp3/.github/diagrams/master-orchestrator-workflow.puml" alt="Master Orchestrator Workflow" width="100%" style="max-width:900px;">
+
+</div>
+
 **Example Use Case:**
 ```bash
 > "Build a secure AI-powered analytics dashboard with real-time data streaming"
@@ -960,6 +967,13 @@ Result: Production-ready system in 2-3 minutes (vs 30+ minutes sequential)
 **Agents:** auto-debugger (primary) + test-runner (validation)
 **Method:** Four-phase systematic debugging
 
+<div align="center">
+
+<!-- PlantUML Debug Workflow -->
+<img src="http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/NovusAevum/dev-agents-orchestration/claude/redesign-readme-visuals-015FxNm8JT3AXtyQB8kipCp3/.github/diagrams/debug-workflow.puml" alt="Debug Workflow" width="100%" style="max-width:900px;">
+
+</div>
+
 **Process:**
 1. **Phase 1: Root Cause** - Grep error patterns, read failing code, analyze stack traces
 2. **Phase 2: Pattern Analysis** - Check historical bugs (Memory MCP), analyze code context (GitHub MCP)
@@ -976,6 +990,13 @@ Result: Production-ready system in 2-3 minutes (vs 30+ minutes sequential)
 **Purpose:** Large-scale code improvements without breaking changes
 **Agents:** production-refactor (primary) + test-runner + security-redteam
 **Patterns:** Complexity reduction, type extraction, function decomposition
+
+<div align="center">
+
+<!-- PlantUML Refactor Workflow -->
+<img src="http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/NovusAevum/dev-agents-orchestration/claude/redesign-readme-visuals-015FxNm8JT3AXtyQB8kipCp3/.github/diagrams/refactor-workflow.puml" alt="Refactor Workflow" width="100%" style="max-width:900px;">
+
+</div>
 
 **Process:**
 1. **Analyze Codebase** - Calculate cyclomatic complexity, cognitive complexity, maintainability index
