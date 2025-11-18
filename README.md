@@ -1,8 +1,10 @@
 <div align="center">
 
-# 🤖 Elite Dev Agents Orchestration
+# 🤖 Dev Agents Orchestration
 
-### *Forged by automation, defined by precision*
+<img src="https://img.shields.io/badge/AI-Powered-blueviolet?style=for-the-badge&logo=openai" alt="AI Powered"/>
+<img src="https://img.shields.io/badge/Autonomous-Agents-success?style=for-the-badge&logo=robot" alt="Autonomous"/>
+<img src="https://img.shields.io/badge/Performance-+300%25-brightgreen?style=for-the-badge&logo=speedtest" alt="Performance"/>
 
 **Autonomous AI agent orchestration system achieving 300-500% faster execution with 40-60% cost reduction**
 
@@ -50,9 +52,9 @@
 
 ## 🎯 About
 
-**Elite Dev Agents Orchestration** is the result of a deep engineering effort to create a true AI development powerhouse. It unifies the most potent features from advanced autonomous agent protocols into a single, cohesive orchestration system designed for complex development tasks.
+**Dev Agents Orchestration** is an autonomous AI development system that unifies advanced agent protocols into a cohesive orchestration platform designed for complex development tasks.
 
-Embodying the principles of digital craftsmanship, this system operates with unparalleled intelligence and transparency, orchestrating 12 proactive agents, 21 specialized skills, and 19 MCP servers to deliver unprecedented development velocity with 40-60% cost reduction and 300-500% faster execution.
+This system orchestrates 12 proactive agents, 21 specialized skills, and 19 MCP servers to deliver 40-60% cost reduction and 300-500% faster execution through intelligent automation and parallel workflows.
 
 ---
 
@@ -60,13 +62,11 @@ Embodying the principles of digital craftsmanship, this system operates with unp
 
 **Wan Mohamad Hanis bin Wan Hassan**
 
-Transdisciplinary strategist synthesizing AI, cybersecurity, cloud infrastructure, and business intelligence into cohesive orchestration systems. Architecting autonomous development workflows that embody precision, efficiency, and digital craftsmanship.
-
-*"Forged by fire, defined by design."*
+Specializing in AI, cybersecurity, cloud infrastructure, and business intelligence. Building autonomous development workflows focused on precision and efficiency.
 
 - 🌐 [GitHub: @NovusAevum](https://github.com/NovusAevum)
 - 💼 Specialization: AI Agent Orchestration, DevOps Automation, Enterprise Architecture
-- 🏆 Philosophy: Zero-BS, test-first, production-ready from day one
+- 🏆 Philosophy: Test-first, production-ready from day one
 
 ---
 
@@ -111,7 +111,7 @@ No mock code. No placeholders. Every output is production-ready, tested, and sec
 
 ### 🤖 Proactive Agent System
 - **12 specialized agents** auto-invoke based on task context
-- **Elite-level autonomy** - Work without supervision
+- **Full autonomy** - Work without supervision
 - **Parallel execution** - Multiple agents coordinate simultaneously
 - **Self-correcting workflows** - Auto-fix errors and adapt
 
@@ -336,11 +336,11 @@ graph TD
     
     Mode -->|Simple Task| Default[Default Mode]
     Mode -->|Medium Complexity| Advanced[Advanced Mode]
-    Mode -->|High Complexity| Elite[Elite Mode]
+    Mode -->|High Complexity| Parallel[Parallel Mode]
     
     Default --> Sequential[Sequential Execution]
     Advanced --> Parallel2[Parallel: Primary + Support]
-    Elite --> ParallelAll[Parallel: All Agents]
+    Parallel --> ParallelAll[Parallel: All Agents]
     
     Sequential --> Execute[Execute Workflow]
     Parallel2 --> Execute
@@ -364,7 +364,7 @@ graph TD
     style SecurityRT fill:#fd79a8
     style Success fill:#00b894
     style Escalate fill:#d63031
-    style Elite fill:#fdcb6e
+    style Parallel fill:#fdcb6e
 ```
 
 ---
@@ -459,7 +459,7 @@ gantt
     Manual Approval        :50, 5
     Validation            :55, 10
 
-    section Elite Mode
+    section Parallel Mode
     Analyze Task (Parallel):0, 5
     Deploy Agents (Parallel):5, 2
     Agent 1 + 2 + 3 (Parallel):7, 10
@@ -582,20 +582,20 @@ The system operates in three modes, auto-selected based on task complexity:
 → Duration: ~15s
 ```
 
-### 3. Elite Mode
-**Use Case:** Complex, multi-domain challenges  
+### 3. Advanced Parallel Mode
+**Use Case:** Complex, multi-domain challenges
 **Characteristics:**
 - All 12 agents available
 - Full parallelization
 - Domain fusion
 - Enterprise patterns
-- Narrative summaries
+- Comprehensive summaries
 
 **Example:**
 ```bash
-> "Build a secure, AI-powered marketing dashboard with Palantir-level UI"
+> "Build a secure, AI-powered marketing dashboard with advanced UI"
 → Invokes: ALL agents (parallel)
-→ Features: Cyber + AI + Marketing fusion
+→ Features: Security + AI + Marketing integration
 → Execution: Fully parallel  
 → Duration: ~45s (would be 5min+ sequential)
 ```
@@ -932,8 +932,8 @@ mindmap
 GITHUB_PERSONAL_ACCESS_TOKEN=ghp_xxxxxxxxxxxx
 
 # Supabase MCP
-SUPABASE_URL=https://xxxxxxxxxxxx.supabase.co
-SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+SUPABASE_URL=https://your-project-id.supabase.co
+SUPABASE_SERVICE_ROLE_KEY=your_service_role_key_here
 
 # Search Services
 BRAVE_API_KEY=BSA_xxxxxxxxxxxx
@@ -1213,7 +1213,7 @@ if (taskRequiresAPIDesign) {
 // Token overhead: ~500 tokens (one-time)
 ```
 
-**Eager Loading (Elite Mode):**
+**Eager Loading (Parallel Mode):**
 ```javascript
 // All relevant skills pre-loaded for complex tasks
 const skills = [
@@ -1326,7 +1326,7 @@ graph TB
 
 ### Permission Matrix Details
 
-| Operation | Default Mode | Elite Mode | Security Rationale |
+| Operation | Default Mode | Parallel Mode | Security Rationale |
 |-----------|-------------|------------|-------------------|
 | **Read Files** | Ask | Bypass | Safe: Read-only, no modification |
 | **Write Files** | Ask | Bypass | Safe: Creates/overwrites files (logged) |
@@ -1928,7 +1928,7 @@ See [MCP Server Ecosystem](#mcp-server-ecosystem) section for full configuration
 }
 ```
 
-#### Elite Mode (Current Configuration)
+#### Parallel Mode (Current Configuration)
 **Use Case:** Maximum autonomy, production workflows
 
 ```json
@@ -2064,7 +2064,7 @@ Tokens used: 3,200 (-45% vs sequential)
 Time: 15 seconds (vs 45s sequential)
 ```
 
-#### 3. Complex Task (Elite Mode)
+#### 3. Complex Task (Parallel Mode)
 ```bash
 > "Build a secure AI-powered customer analytics dashboard with real-time data streaming, deployed to AWS with CI/CD"
 
@@ -2216,17 +2216,17 @@ Backward compatibility maintained
 
 #### Pattern 3: Domain Fusion
 ```bash
-> "Build a cybersecurity-themed AI chatbot with Palantir-style UI"
+> "Build a cybersecurity-themed AI chatbot with enterprise-grade UI"
 
 [Master Orchestrator - Domain Fusion]
 🎨 Domains identified:
   1. Cybersecurity (threat intelligence)
   2. AI/LLM (chatbot logic)
-  3. Palantir UI (dark, data-viz heavy)
+  3. Enterprise UI (dark theme, data visualization)
 
 [Agent Deployment]
 ├─ elite-frontend-architect
-│  ✅ Dark mode UI (Palantir aesthetic)
+│  ✅ Dark mode UI (enterprise aesthetic)
 │  ✅ Animated data streams
 │  ✅ Cyber-themed components
 │
@@ -2243,7 +2243,7 @@ Backward compatibility maintained
 └─ Domain fusion engine (skill)
    ✅ Cyber + AI vocabulary synthesis
    ✅ Threat intel context injection
-   ✅ Palantir-style data narratives
+   ✅ Enterprise-style data narratives
 
 [Unique Features]
 🎨 Animated threat map
@@ -2253,7 +2253,7 @@ Backward compatibility maintained
 
 [Result]
 Domain fusion successful: 3 distinct domains unified
-UI polish: Palantir-grade aesthetics
+UI polish: Enterprise-grade aesthetics
 AI quality: Cyber-specialized responses
 ```
 

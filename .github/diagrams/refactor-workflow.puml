@@ -1,0 +1,47 @@
+@startuml
+!theme mars
+
+title <size:18><b>Refactor Workflow - Code Improvement Pipeline</b></size>
+
+start
+
+:Refactor Request;
+
+:Analyze Codebase;
+
+partition "**Calculate Metrics**" {
+  fork
+    :Cyclomatic\nComplexity;
+  fork again
+    :Cognitive\nComplexity;
+  fork again
+    :Maintainability\nIndex;
+  end fork
+}
+
+:Select Strategy;
+
+if (Strategy?) then (High Complexity)
+  #ff6b6b:Storifying Pattern;
+elseif (Many Types) then (yes)
+  #4ecdc4:Type Extraction;
+else (Long Functions)
+  #45b7d1:Function Extraction;
+endif
+
+:Apply Refactor;
+
+:Run Full Test Suite;
+:Security Scan;
+:Performance Benchmark;
+
+if (Quality Gates Pass?) then (yes)
+  #00b894:Commit Changes;
+  :Log Improvements;
+  stop
+else (no)
+  #d63031:Rollback;
+  backward:Try different strategy;
+endif
+
+@enduml

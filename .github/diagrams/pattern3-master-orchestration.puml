@@ -1,0 +1,49 @@
+@startuml
+!theme mars
+
+title <size:16><b>Pattern 3: Master Orchestration (Elite Mode)</b></size>\n<size:12>Complex multi-domain challenges</size>
+
+actor "👤 User" as User #e0e0e0
+node "🎭 Master Orchestrator\nElite Mode" as Master #ff6b6b
+
+together {
+  node "🏛️ codebase-architect\nSystem design" as A1 #9b59b6
+  node "🔌 backend-api-agent\nREST + WebSocket + ML" as A2 #45b7d1
+  node "🎨 elite-frontend-architect\nPalantir dashboard" as A3 #96ceb4
+}
+
+together {
+  node "🎯 frontend-specialist-agent\nD3.js visualizations" as A4 #4ecdc4
+  node "☁️ cloud-architect-agent\nAWS infrastructure" as A5 #74b9ff
+  node "🛡️ security-redteam-agent\nThreat model + RBAC" as A6 #fd79a8
+}
+
+together {
+  node "🧪 test-runner\nE2E + load tests" as A7 #fdcb6e
+  node "🏗️ production-refactor\nPerformance tuning" as A8 #a8e6cf
+  node "🔧 auto-debugger\nIssue resolution" as A9 #4ecdc4
+}
+
+node "✅ Production-ready\n2-3 minutes" as Result #00ff88
+
+User --> Master : AI marketing platform
+Master --> A1
+Master --> A2
+Master --> A3
+Master --> A4
+Master --> A5
+Master --> A6
+Master --> A7
+Master --> A8
+Master --> A9
+A1 --> Result
+A2 --> Result
+A3 --> Result
+A4 --> Result
+A5 --> Result
+A6 --> Result
+A7 --> Result
+A8 --> Result
+A9 --> Result
+
+@enduml

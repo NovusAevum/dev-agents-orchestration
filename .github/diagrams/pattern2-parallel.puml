@@ -1,0 +1,30 @@
+@startuml
+!theme mars
+
+title <size:16><b>Pattern 2: Parallel Execution</b></size>\n<size:12>Multi-domain tasks</size>
+
+actor "👤 User" as User #e0e0e0
+node "⚡ Parallel Execution" as Master #ff6b6b
+
+together {
+  node "🔌 backend-api-agent\nAPI + OpenAPI docs" as A #45b7d1
+  node "🛡️ security-redteam-agent\nAuth + rate limiting" as B #fd79a8
+  node "🧪 test-runner\nUnit + integration tests" as C #fdcb6e
+  node "🏗️ production-refactor\nOptimization + types" as D #a8e6cf
+}
+
+node "🔄 Merge Results" as Merge #9b59b6
+node "✅ Complete in 15s\nvs 60s sequential" as Result #00ff88
+
+User --> Master : Build payment API
+Master --> A
+Master --> B
+Master --> C
+Master --> D
+A --> Merge
+B --> Merge
+C --> Merge
+D --> Merge
+Merge --> Result
+
+@enduml
